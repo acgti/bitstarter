@@ -23,9 +23,14 @@ References:
 
 var fs = require('fs');
 var program = require('commander');
+var rest = require('restler');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+
+//download the html from what's entered in command line//
+
+
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
