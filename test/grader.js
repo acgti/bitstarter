@@ -82,7 +82,8 @@ if(require.main == module) {
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-u, --url <url_to_check','link', clone(assertURLExists))
-        .parse(process.argv);// If file name was given, compare checks to file
+        .parse(process.argv);
+        // If file name was given, compare checks to file
     if(!program.url) {
       var checkJson = checkHtmlFile(program.file, program.checks);
       var outJson = JSON.stringify(checkJson, null, 4);
@@ -98,9 +99,9 @@ if(require.main == module) {
             var outJson = JSON.stringify(checkJson, null, 4);
  
             console.log(outJson);
-        };
-    };
-};
+        });
+    }
+}
 else {
     exports.checkHtmlFile = checkHtmlFile;
 }
