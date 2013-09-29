@@ -25,6 +25,7 @@ var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
+var rest = require('rest')
 var CHECKSFILE_DEFAULT = "checks.json";
 
 var HtmlFromUrl = function(URL){
